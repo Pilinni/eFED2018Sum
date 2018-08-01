@@ -63,7 +63,13 @@ p,form{
   margin-left:10px;
   margin-right:320px;
 }
-
+.header-search::before {
+	content: url(../img/find.png);
+	position: relative;
+	top: 3px;
+	left: 32px;
+	padding-right: 5px;
+}
 .search{
   border-radius: 5px;
   border: 1px solid #cacaca;
@@ -83,8 +89,9 @@ p,form{
 
 main{
   line-height: normal;
-  margin:0;
+  margin:0px;
   padding:0;
+
 }
 section{
   margin:0;
@@ -123,38 +130,110 @@ section{
   padding: 10px 15px 10px 15px;
   margin-right: 10px;
 }
-.temperature{
+.diagram{
+  display: flex;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top:25px;
+}
+.diagram-block{
+  display: flex;
+  flex-grow: 1;
+  min-width: 320px;
+  flex-flow: column;
+}
+.diagram-rainfall{
   display: flex;
 }
-.temperature div{
+.rainfall-level{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.time{
+  display: flex;
+  justify-content: space-around;
+  padding-top:15px;
+}
+
+.low-rainfall{
+  height: 15px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+.high-rainfall{
+  height: 30px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+.wow-rainfall{
+  height: 40px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+.null-rainfall{
+  height: 3px;
+  border-top: 2px solid #1878f0;
+  background-color: #e7f1fd;
+}
+.weather{
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom:25px;
+}
+.weather-item{
   display: flex;
   align-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 12.5%;
-  margin-top: 30px;
+  margin-top: 15px;
+}
+.weather-active{
+  background: #fcfcfc;
+  border: 1px solid #e9e9e9;
+}
+.diagram-temperature{
+  display: flex;
+  justify-content: space-around;
+}
+
+.temperature{
+  height: 70px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.high-temperature{
+  height: 30px;
+  background-color: #81D4FA;
+}
+.low-temperature{
+  height: 15px;
+  background-color: #81D4FA;
+}
+.diagram-wind{
+  display: flex;
+  justify-content: space-around;
 }
 .wind{
-  display: flex;
+  height: 70px;
+    display: flex;
+    flex-direction: column-reverse;
 }
-.wind div{
-  width: 12.5%;
-  padding: 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
+.wind-310{
+  margin-top:10px;
+  transform: rotate(310deg);
 }
-.rainfall{
-  display: flex;
+.wind-350{
+  margin-top:10px;
+  transform: rotate(350deg);
 }
-.rainfall div{
-  width: 12.5%;
-  padding: 35px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
+.wind-10{
+  margin-top:10px;
+  transform: rotate(10deg);
 }
 .main-footer{
   border-top: 1px solid #a8a8a8;
@@ -167,6 +246,39 @@ section{
 .main-footer p{
     margin:13px 0px 13px 0px;
 }
-.box{
-  min-height: 350px;
+
+@media (max-width: 1200px)
+{
+  .weather{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .weather-item{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .diagram{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+.header-up{
+  display:flex;
+  justify-content: space-around;
+}
+ .header-down > p{
+   margin: 0px;
+   padding: 0px;
+   margin-top:10px;
+   margin-bottom:5px;
+ }
+.header-down{    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+
+}
 }
