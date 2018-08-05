@@ -8,24 +8,33 @@
 	<link href="styles/normalize.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
 </head>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Прогноз погоды</title>
+	<link href="styles/normalize.css" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet">
+</head>
 
 <body>
 	<div class="container">
 
   <header>
-		<div class=header-up>
-			<nav class="main-navigation">
-	        <ul class="site-navigation">
-	          <li><a class="button-today active" href="today.html">Сегодня</a></li>
-	          <li><a class="button-5_day" href="5_day.html">5 дней</a></li>
-	          <li><a class="button-weather_history" href="weather_history.html">История погоды</a></li>
-	        </ul>
-	    </nav>
-		</div>
+		<nav class="header-up">
+	    <ul class="site-navigation">
+	      <li class="site-navigation-button active"><a class="button-pages" href="today.html">Сегодня</a></li>
+	      <li class="site-navigation-button"><a class="button-pages" href="5_day.html">5 дней</a></li>
+	      <li class="site-navigation-button"><a class="button-pages" href="weather_history.html">История погоды</a></li>
+	    </ul>
+	  </nav>
+
 		<div class="header-down">
-			<p class="zagr">Загрязнение воздуха:8.168633923649e-8</p>
+			<p class="zagr">Загрязнение воздуха: 8.168633923649e-8</p>
 			<form class="header-search">
-		   <p><input class="search" type="search" name="q" placeholder="Поиск"></p>
+			  <input class="search" type="search" name="q" placeholder="Поиск">
 		  </form>
 		</div>
 	</header>
@@ -33,23 +42,20 @@
 	<main class="main-container">
 		<div class="index-columns">
 			<section class="block-1">
-				<p>Ижевск, Россия</p><br>
-				<p>среда</p><br>
-				<p>облачно</p><br>
-				<p><img src="img/Sunny Weather.png" alt="Sunny Weather"><p><br>
-			  <p id="ra">22&#176;C</p>
+				<p class="media-text">Ижевск, Россия</br>cреда</br>облачно</p>
+				<img src="img/Sunny Weather.png" alt="Sunny Weather" width="80px">
+				<span id="ra">22&deg;</span>
 			</section>
 			<section class="block-2">
-				<p>Вероятность осадков:20%</p><br>
-				<p>Влажность:45%</p><br>
-				<p>Ветер:11км/ч</p><br>
-				<ul class="main-buttons">
-					<li><a class="button-temperature" href="today.html">Температура</a></li>
-					<li><a class="button-rainfall active" href="today-rainfall.html">Вероятность осадков</a></li>
-					<li><a class="button-wind" href="today-wind.html">Ветер</a></li>
-				</ul>
+				<p class="media-text">Вероятность осадков: 20%</br>Влажность: 45%</br>Ветер: 11 км/ч</p>
+        <div class="main-buttons">
+          <button onclick="location.href = 'today.html'" class="button-temperature shadow">Температура</button>
+          <button onclick="location.href = 'today-rainfall.html'" class="button-rainfall active2">Вероятность </br>осадков</button>
+          <button onclick="location.href = 'today-wind.html'" class="button-wind shadow"> Ветер</button>
+        </div>
 			</section>
 		</div>
+
 		<section class="diagram">
       <div class="diagram-block">
         <div class="diagram-rainfall">
@@ -58,7 +64,7 @@
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
-            <div>24%</div>
+            <div class="media-text2 blue">24%</div>
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
@@ -68,7 +74,7 @@
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
-            <div>30%</div>
+            <div class="media-text2 blue">30%</div>
           </div>
           <div class="rainfall-level">
             <div class="wow-rainfall"></div>
@@ -78,7 +84,7 @@
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
-            <div>24%</div>
+            <div class="media-text2 blue">24%</div>
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
@@ -89,17 +95,17 @@
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
-            <div>8%</div>
+            <div class="media-text2 blue">8%</div>
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
           </div>
         </div>
         <div class="time">
-          <div>17:00</div>
-          <div>20:00</div>
-          <div>23:00</div>
-          <div>02:00</div>
+          <div class="media-text2">17:00</div>
+          <div class="media-text2">20:00</div>
+          <div class="media-text2">23:00</div>
+          <div class="media-text2">02:00</div>
         </div>
       </div>
       <div class="diagram-block">
@@ -109,7 +115,7 @@
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
-            <div>4%</div>
+            <div class="media-text2 blue">4%</div>
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
@@ -120,7 +126,7 @@
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
-            <div>6%</div>
+            <div class="media-text2 blue">6%</div>
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
@@ -130,7 +136,7 @@
           </div>
           <div class="rainfall-level">
             <div class="null-rainfall"></div>
-            <div>0%</div>
+            <div class="media-text2 blue">0%</div>
           </div>
           <div class="rainfall-level">
             <div class="null-rainfall"></div>
@@ -141,17 +147,17 @@
           </div>
           <div class="rainfall-level">
             <div class="low-rainfall"></div>
-            <div>1%</div>
+            <div class="media-text2 blue">1%</div>
           </div>
           <div class="rainfall-level">
             <div class="high-rainfall"></div>
           </div>
         </div>
         <div class="time">
-          <div>05:00</div>
-          <div>08:00</div>
-          <div>11:00</div>
-          <div>14:00</div>
+          <div class="media-text2">05:00</div>
+          <div class="media-text2">08:00</div>
+          <div class="media-text2">11:00</div>
+          <div class="media-text2">14:00</div>
         </div>
       </div>
     </section>
@@ -159,35 +165,35 @@
 		<section class="weather">
 			<div class="weather-item weather-active">
 				<p>ср</p><img src="img/cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>22&deg;</span> 13&deg;</p>
+				<p><span class="green">22&deg;</span> 13&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>чт</p><img src="img/rain_light.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>21&deg;</span> 11&deg;</p>
+				<p><span class="green">21&deg;</span> 11&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>пт</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>24&deg;</span> 12&deg;</p>
+				<p><span class="green">24&deg;</span> 12&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>сб</p><img src="img/rain_s_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>26&deg;</span> 13&deg;</p>
+				<p><span class="green">26&deg;</span> 13&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>вс</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>27&deg;</span> 14&deg;</p>
+				<p><span class="green">27&deg;</span> 14&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>пн</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>28&deg;</span> 14&deg;</p>
+				<p><span class="green">28&deg;</span> 14&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>вт</p><img src="img/rain_s_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>28&deg;</span> 14&deg;</p>
+				<p><span class="green">28&deg;</span> 14&deg;</p>
 			</div>
 			<div class="weather-item">
 				<p>ср</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span>28&deg;</span> 14&deg;</p>
+				<p><span class="green">28&deg;</span> 14&deg;</p>
 			</div>
 		</section>
 	</main>

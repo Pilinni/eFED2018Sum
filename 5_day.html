@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Прогноз погоды</title>
 	<link href="styles/normalize.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
@@ -12,23 +13,335 @@
 	<div class="container">
 
   <header>
-		<div class=header-up>
-			<nav class="main-navigation">
-	        <ul class="site-navigation">
-	          <li><a class="button-today" href="today.html">Сегодня</a></li>
-	          <li><a class="button-5_day active" href="5_day.html">5 дней</a></li>
-	          <li><a class="button-weather_history" href="weather_history.html">История погоды</a></li>
-	        </ul>
-	    </nav>
-		</div>
+		<nav class="header-up">
+	    <ul class="site-navigation">
+	      <li class="site-navigation-button"><a class="button-pages" href="today.html">Сегодня</a></li>
+	      <li class="site-navigation-button active"><a class="button-pages" href="5_day.html">5 дней</a></li>
+	      <li class="site-navigation-button"><a class="button-pages" href="weather_history.html">История погоды</a></li>
+	    </ul>
+	  </nav>
+
 		<div class="header-down">
-			<p class="niz-header zagr">Загрязнение воздуха:8.168633923649e-8</p>
-			<form class="niz-header sea">
-		   <p><input class="search" type="search" name="q" placeholder="Поиск"></p>
+			<img class="header-image-cloudy" src="img/cloudy.png" width="40" alt="img">
+			<p class="zagr">34&degC Ижевск, Россия</p>
+			<form class="header-search">
+			  <input class="search" type="search" name="q" placeholder="Поиск">
 		  </form>
 		</div>
 	</header>
 
 </div>
+<main class="content">
+	<section class="weathertable">
+		<div class="weathertable-5days">
+			<div class="time-of-day-temperature">
+				<div class="day-of-week">Пт, 18 мая</div>
+				<div class="wrapper5">
+
+								<div class="time-of-day">
+					<span class="text-size-small shift1">Ночь</span>
+					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift2">Утро</span>
+					<img src="img/icon-sunny.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small">День</span>
+					<img src="img/icon-rain-wind.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift3">Вечер</span>
+					<img src="img/icon-rain.png" width="24" alt="W_Pic">
+				</div>
+</div>
+				<div class="temperature-during-the-day">
+					<div class="temperature-night">+8</div>
+					<div class="temperature-morning">+16</div>
+					<div class="temperature-daytime">+21</div>
+					<div class="temperature-evening">+17</div>
+				</div>
+			</div>
+			<div class="time-of-day-temperature">
+				<div class="day-of-week">Сб, 19 мая</div>
+				<div class="wrapper5">
+
+								<div class="time-of-day">
+					<span class="text-size-small shift1">Ночь</span>
+					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift2">Утро</span>
+					<img src="img/icon-sunny.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small">День</span>
+					<img src="img/icon-rain-wind.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift3">Вечер</span>
+					<img src="img/icon-rain.png" width="24" alt="W_Pic">
+				</div>
+</div>
+				<div class="temperature-during-the-day">
+					<div class="temperature-night">+8</div>
+					<div class="temperature-morning">+16</div>
+					<div class="temperature-daytime">+21</div>
+					<div class="temperature-evening">+17</div>
+				</div>
+			</div>
+			<div class="time-of-day-temperature">
+				<div class="day-of-week">Вс, 20 мая</div>
+				<div class="wrapper5">
+
+								<div class="time-of-day">
+					<span class="text-size-small shift1">Ночь</span>
+					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift2">Утро</span>
+					<img src="img/icon-sunny.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small">День</span>
+					<img src="img/icon-rain-wind.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift3">Вечер</span>
+					<img src="img/icon-rain.png" width="24" alt="W_Pic">
+				</div>
+</div>
+				<div class="temperature-during-the-day">
+					<div class="temperature-night">+8</div>
+					<div class="temperature-morning">+16</div>
+					<div class="temperature-daytime">+21</div>
+					<div class="temperature-evening">+17</div>
+				</div>
+			</div>
+			<div class="time-of-day-temperature">
+				<div class="day-of-week">Пн, 21 мая</div>
+				<div class="wrapper5">
+
+								<div class="time-of-day">
+					<span class="text-size-small shift1">Ночь</span>
+					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift2">Утро</span>
+					<img src="img/icon-sunny.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small">День</span>
+					<img src="img/icon-rain-wind.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift3">Вечер</span>
+					<img src="img/icon-rain.png" width="24" alt="W_Pic">
+				</div>
+</div>
+				<div class="temperature-during-the-day">
+					<div class="temperature-night">+8</div>
+					<div class="temperature-morning">+16</div>
+					<div class="temperature-daytime">+21</div>
+					<div class="temperature-evening">+17</div>
+				</div>
+			</div>
+			<div class="time-of-day-temperature">
+				<div class="day-of-week">Вт, 22 мая</div>
+				<div class="wrapper5">
+
+								<div class="time-of-day">
+					<span class="text-size-small shift1">Ночь</span>
+					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift2">Утро</span>
+					<img src="img/icon-sunny.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small">День</span>
+					<img src="img/icon-rain-wind.png" width="24" alt="W_Pic">
+				</div>
+				<div class="time-of-day">
+					<span class="text-size-small shift3">Вечер</span>
+					<img src="img/icon-rain.png" width="24" alt="W_Pic">
+				</div>
+</div>
+				<div class="temperature-during-the-day">
+					<div class="temperature-night">+8</div>
+					<div class="temperature-morning">+16</div>
+					<div class="temperature-daytime">+21</div>
+					<div class="temperature-evening">+17</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<div class="weathertable-max-wind-speed">
+			<span>Максимальная скорость ветра, м/с</span>
+		</div>
+		<div class="wind-speed-5days">
+
+			<div class="dayblock">
+				<div class="day">ПТ, 18 мая</div>
+				<div class="wind-speed-5days__one-days">
+					<div class="wind-value">2</div>
+					<div class="wind-value">5</div>
+					<div class="wind-value">4</div>
+					<div class="wind-value">5</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">СБ, 19 мая</div>
+				<div class="wind-speed-5days__one-days">
+					<div class="wind-value">2</div>
+					<div class="wind-value">5</div>
+					<div class="wind-value">4</div>
+					<div class="wind-value">5</div>
+				</div>
+			</div>
+
+			<div class="dayblock">
+				<div class="day">Вс, 20 мая</div>
+				<div class="wind-speed-5days__one-days">
+					<div class="wind-value">2</div>
+					<div class="wind-value">5</div>
+					<div class="wind-value">4</div>
+					<div class="wind-value">5</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Пн, 21 мая</div>
+				<div class="wind-speed-5days__one-days">
+					<div class="wind-value">2</div>
+					<div class="wind-value">5</div>
+					<div class="wind-value">4</div>
+					<div class="wind-value">5</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Вт, 22 мая</div>
+				<div class="wind-speed-5days__one-days">
+					<div class="wind-value">2</div>
+					<div class="wind-value">5</div>
+					<div class="wind-value">4</div>
+					<div class="wind-value">5</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="weathertable-rainfall">
+			<span>Осадки, мм</span>
+		</div>
+		<div class="weathertable-rainfall-5days">
+
+			<div class="dayblock">
+				<div class="day">ПТ, 18 мая</div>
+				<div class="weathertable-rainfall__one-days">
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/wave.png" width="22" height="22" alt="level"> 2,2
+					</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/max-wave.png" width="22" height="44" alt="level"> 4,6
+					</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Сб, 19 мая</div>
+				<div class="weathertable-rainfall__one-days">
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/max-wave.png" width="22" height="44" alt="level"> 4,5
+					</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/wave.png" width="22" height="22" alt="level"> 2,2
+					</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Вс, 20 мая</div>
+				<div class="weathertable-rainfall__one-days">
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/max-wave.png" width="22" height="44" alt="level"> 4,7
+					</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/wave.png" width="22" height="22" alt="level"> 2,2
+					</div>
+					<div class="precipitation-level">0</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Пн, 21 мая</div>
+				<div class="weathertable-rainfall__one-days">
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/wave.png" width="22" height="22" alt="level"> 2,2
+					</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/max-wave.png" width="22" height="44" alt="level"> 4,6
+					</div>
+				</div>
+			</div>
+			<div class="dayblock">
+				<div class="day">Вт, 22 мая</div>
+				<div class="weathertable-rainfall__one-days">
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">0</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/wave.png" width="22" height="22" alt="level"> 2,2
+					</div>
+					<div class="precipitation-level">
+						<img class="style-image" src="img/max-wave.png" width="22" height="44" alt="level"> 4,6
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="curentday-sun-day-and-moon">
+		Пятница 18 мая
+		<span class="textspace">Солнце и луна</span>
+	</section>
+
+	<section class="Sun-and-moon">
+		<div class="Sun-and-moon__sun-info">
+			<div class="Sun-image">
+				<img src="img/icon-sun.png" width="100" alt="Moon Picture">
+			</div>
+			<div class="day-length-sunrise-and-sunset">Долгота дня - 16ч. 43 мин.
+				<br/>
+				<br/>Восход - 4:02
+				<br/>
+				<br/>Заход - 20:45
+			</div>
+			<div class="today-day-length">
+				<span>Сегодня день на 2 минуты длиннее, чем вчера</span>
+			</div>
+		</div>
+		<div class="Sun-and-moon__moon-info">
+			<div class="moon-image">
+				<img src="img/icon-moon.png" width="100" alt="Moon Picture">
+			</div>
+			<div class="sunrise-and-sunset">Луна растущая - 19%
+				<br/>
+				<br/>Восход - 7:40
+				<br/>
+				<br/>Заход - 10:58
+			</div>
+			<div class="full-moon">
+				<span>Полнолуние - 28 июня, через 23 дня</span>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="main-footer">
+	<p>2018 &#169; Copyright</p>
+</footer>
 </body>
 </html>
