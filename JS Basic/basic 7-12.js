@@ -54,13 +54,13 @@ function replaceQuotes(str){
 console.log(replaceQuotes("I’m the ‘hero’"));
 
 // Задание 10. Найти числа
-var number = /^(?:...)\D$/;
+var number = /^[+-]?[0-9]*[.]?[0-9]*([eE][+-]?[0-9]*)?$/;
 var goods =[];
 function findNumbers(Array){
 
 Array.forEach(function(element) {
 
-  if (!number.test(element)){
+  if (number.test(element) && element !="."){
   goods[goods.length] = element;
   return goods;
 	}
@@ -68,8 +68,10 @@ Array.forEach(function(element) {
  console.log(goods);
 }
 console.log(findNumbers(["1", "-1", "+15", "1.55", ".5", "5.", "1.3e2", "1E-4", "1e+12"]));
+var goods =[];
+console.log(findNumbers(["1a", "+-1", "1.2.3", "1+1", "1e4.5", ".5.", "1f5", "."]));
 
-// задание 11. 11.	День и месяц
+// задание 11. День и месяц
 function getNames(){
 var months = [
 	'January', 'February', 'March', 'April', 'May', 'June',
@@ -98,3 +100,45 @@ function differenceInYears(a, b){
 }
 console.log(differenceInYears(new Date(2014, 10, 2), new Date(2016, 10, 2)));
 console.log(differenceInYears(new Date(2014, 0), new Date(2014, 6)));
+
+// Задача 13.	Погода Anomaly
+var array =  [{id: "id123",param: "-33"},
+              {id: "id124",param: "22"},
+              {id: "id125",param: "-11"},
+              {id: "id126",param: "7"},
+              {id: "id127",param: "30"},
+              {id: "id128",param: "-8"},
+              {id: "id321",param: "45"}
+			 ];
+
+ function findAnomaly(array, param) {
+    var Min = array[0].param;
+    var Max = array[0].param;
+    var arrMin = {};
+	  var arrMax = {};
+
+    for (i = 0; i < array.length; i++)
+		{
+         if (Min <= array[i].param) {
+            Min = Min;
+			      arrMin = array[array[0].param];
+        }
+		     else {
+			      Min = array[i].param;
+			      arrMin = array[i];
+		    }
+
+    }
+    for (i = 0; i < array.length; i++) {
+         if (Max >= array[i].param) {
+			      Max = Max;
+            arrMax = array[array[0].param];
+        }
+		    else {
+			      Max = array[i].param;
+			      arrMax = array[i];
+		        }
+    }
+    return console.log(arrMin,arrMax);
+}
+console.log(findAnomaly(array, `param`));
