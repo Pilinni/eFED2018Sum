@@ -121,7 +121,7 @@ var array =  [{id: "id123",param: "-33"},
 		{
          if (Min <= array[i].param) {
             Min = Min;
-			      arrMin = array[array[0].param];
+			      arrMin = array[0];
         }
 		     else {
 			      Min = array[i].param;
@@ -132,7 +132,7 @@ var array =  [{id: "id123",param: "-33"},
     for (i = 0; i < array.length; i++) {
          if (Max >= array[i].param) {
 			      Max = Max;
-            arrMax = array[array[0].param];
+            arrMax = array[0];
         }
 		    else {
 			      Max = array[i].param;
@@ -142,3 +142,38 @@ var array =  [{id: "id123",param: "-33"},
     return console.log(arrMin,arrMax);
 }
 console.log(findAnomaly(array, `param`));
+
+// задача 14. средняя температура за годах
+
+var array = [{"city": "Izhevsk","year": "2016","avearage": -12,"min": -35,"max": 4},
+			       {"city": "Izhevsk","year": "2016","avearage": -18,"min": -39,"max": 4},
+			       {"city": "Izhevsk","year": "2016","avearage": -4,"min": -15,  "max": 6},
+			       {"city": "Izhevsk","year": "2016","avearage": 5,"min": -15, "max": 22},
+			       {"city": "Izhevsk","year": "2016","avearage": 14,"min": 16,"max": 35},
+			       {"city": "Izhevsk","year": "2016","avearage": 21, "min": 11, "max": 36},
+			       {"city": "Izhevsk","year": "2016","avearage": 26,"min": 14, "max": 40},
+			       {"city": "Izhevsk","year": "2016","avearage": 28,"min": 4, "max": 36},
+			       {"city": "Izhevsk","year": "2016","avearage": 18,"min": 8,"max": 28},
+			       {"city": "Izhevsk","year": "2016","avearage": 7,"min": -15,"max": 29},
+		       	 {"city": "Izhevsk","year": "2016","avearage": -1,"min": -20,"max": 11},
+		      	 {"city": "Izhevsk","year": "2016","avearage": -16,"min": -16,"max": -4},
+		       	]
+
+function weatherStat(array, obj) {
+    var currentYear = obj.date;
+    var currentCity = obj.city;
+    var lastyear = currentYear.getFullYear();
+    var tempArray = [];
+    for (i = 0; i < array.length; i++) {
+        if ((array[i][`year`] == lastyear) && (array[i][`city`] == currentCity)) {
+            tempArray[i] = array[i][`avearage`];
+        }
+    }
+    var total = 0;
+    for (var i = 0; i < tempArray.length; i++) {
+        total += tempArray[i];
+    }
+    var avg = Math.round(total / tempArray.length);
+     return console.log('Средняя температура за год' + ':' + avg + 'градусов');
+ };
+ console.log(weatherStat(array, {city: "Izhevsk", date: new Date(2016, 0)}));
