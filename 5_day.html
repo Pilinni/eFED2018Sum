@@ -7,6 +7,7 @@
 	<title>Прогноз погоды</title>
 	<link href="styles/normalize.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
+	<script src="js/script.js"></script>
 </head>
 
 <body>
@@ -34,11 +35,11 @@
 <main class="content">
 	<section class="weathertable">
 		<div class="weathertable-5days">
-			<div class="time-of-day-temperature">
+			<button onclick="backclick();" class="button-back rotate-strelka"><img src="img/arrow.png" width="24" alt="W_Pic"></button>
+			<div class="time-of-day-temperature activity">
 				<div class="day-of-week">Пт, 18 мая</div>
 				<div class="wrapper5">
-
-								<div class="time-of-day">
+					<div class="time-of-day">
 					<span class="text-size-small shift1">Ночь</span>
 					<img src="img/icon-cloudy.png" width="24" alt="W_Pic">
 				</div>
@@ -54,7 +55,7 @@
 					<span class="text-size-small shift3">Вечер</span>
 					<img src="img/icon-rain.png" width="24" alt="W_Pic">
 				</div>
-</div>
+				</div>
 				<div class="temperature-during-the-day">
 					<div class="temperature-night">+8</div>
 					<div class="temperature-morning">+16</div>
@@ -62,7 +63,12 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature">
+
+
+
+
+
+			<div class="time-of-day-temperature block-none">
 				<div class="day-of-week">Сб, 19 мая</div>
 				<div class="wrapper5">
 
@@ -90,7 +96,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature">
+			<div class="time-of-day-temperature block-none">
 				<div class="day-of-week">Вс, 20 мая</div>
 				<div class="wrapper5">
 
@@ -118,7 +124,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature">
+			<div class="time-of-day-temperature block-none">
 				<div class="day-of-week">Пн, 21 мая</div>
 				<div class="wrapper5">
 
@@ -146,7 +152,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature">
+			<div class="time-of-day-temperature block-none">
 				<div class="day-of-week">Вт, 22 мая</div>
 				<div class="wrapper5">
 
@@ -174,6 +180,14 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
+			<button onclick="nextclick();" class="button-next"><img src="img/arrow.png" width="24" alt="W_Pic"></button>
+		</div>
+		<div class="trigger">
+			<button onclick="trigger__button1();" class="trigger-button number1">пт</button>
+			<button onclick="trigger__button2();" class="trigger-button number2">сб</button>
+			<button onclick="trigger__button3();" class="trigger-button number3">вс</button>
+			<button onclick="trigger__button4();" class="trigger-button number4">пн</button>
+			<button onclick="trigger__button5();" class="trigger-button number5">вт</button>
 		</div>
 		</div>
 

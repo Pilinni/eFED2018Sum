@@ -252,13 +252,6 @@ section{
 }.main-footer{
   box-shadow: 0 -5px 5px rgba(122,122,122,0.5);
 }
-/*button .shadow:hover {
-  box-shadow: 200px 0 0 0 #86FF73 inset;
-}
-*/
-
-
-
 
 /* Page - hystory.html */
 
@@ -622,6 +615,16 @@ flex-wrap: wrap;
 	text-align: center;
 }
 
+
+.rotate-strelka{
+  transform: rotate(180deg);
+}
+.button-back, .button-next{
+  display: none;
+}
+
+.trigger{display: none;}
+
 @media (max-width: 768px)
 {
   .weather{
@@ -784,7 +787,31 @@ flex-wrap: wrap;
   .header-image-cloudy{
     left: 40px;
   }
-
+  .button-back, .button-next{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+  }
+  .block-none{
+    display: none;
+  }
+  .trigger{
+    padding: 10px 40px 10px 40px;
+    justify-content: space-around;
+    display: flex;
+    border: 1px solid black;
+  }
+  .trigger-button{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+  }
+}
+.diagram-none{
+  display: none;
+}
+.number1{
+  background-color: #86FF73;
 }
 @media (max-width: 360px){
   .site-navigation-button{
