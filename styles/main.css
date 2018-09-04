@@ -125,8 +125,12 @@ section{
   padding-bottom: 2px;
 }
 .diagram{
+  display: none;
+}
+.active1{
   display: flex;
-  text-align: center;
+  align-items: center;
+
   padding-left: 15px;
   padding-right: 15px;
   margin-top:15px;
@@ -134,9 +138,8 @@ section{
 }
 .diagram-block{
   display: flex;
-  flex-grow: 1;
-
   flex-flow: column;
+  flex-grow: 1;
 }
 .diagram-rainfall{
   display: flex;
@@ -146,6 +149,7 @@ section{
   height: 70px;
   display: flex;
   flex-direction: column-reverse;
+
 }
 .blue{
   color:blue;
@@ -181,6 +185,11 @@ section{
   height: 3px;
   border-top: 2px solid #1878f0;
   background-color: #e7f1fd;
+}
+.media-text2{
+  display: flex;
+  justify-content: center;
+
 }
 .weather{
   display: flex;
@@ -225,6 +234,7 @@ section{
   height: 70px;
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
 }
 .wind-310{
   margin-top:0px;
@@ -638,11 +648,7 @@ flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
   }
-  .diagram{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
+
   .diagram-block{
     width: 100%;
 }
@@ -678,6 +684,11 @@ flex-wrap: wrap;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .active1{
+    justify-content: space-between;
+    flex-flow: column;
+
   }
 }
 @media  (max-width: 740px){
@@ -792,27 +803,34 @@ flex-wrap: wrap;
     align-items: center;
     border: 1px solid black;
   }
-  .block-none{
-    display: none;
+
+  .time-of-day-temperature{
+    display:none;
   }
+  .activity{
+    display:block;
+  }
+
   .trigger{
     padding: 10px 40px 10px 40px;
     justify-content: space-around;
     display: flex;
     border: 1px solid black;
   }
+
   .trigger-button{
     border: 1px solid black;
     padding: 5px;
     background-color: white;
   }
-}
-.diagram-none{
-  display: none;
-}
-.number1{
-  background-color: #86FF73;
-}
+  .activus{
+    background-color: #86FF73;
+
+  }
+
+
+
+
 @media (max-width: 360px){
   .site-navigation-button{
     margin-left: auto;

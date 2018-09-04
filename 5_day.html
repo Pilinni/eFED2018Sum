@@ -7,7 +7,6 @@
 	<title>Прогноз погоды</title>
 	<link href="styles/normalize.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
-	<script src="js/script.js"></script>
 </head>
 
 <body>
@@ -33,9 +32,9 @@
 
 </div>
 <main class="content">
-	<section class="weathertable">
+	<section class="weathertable" id="weatherbox">
 		<div class="weathertable-5days">
-			<button onclick="backclick();" class="button-back rotate-strelka"><img src="img/arrow.png" width="24" alt="W_Pic"></button>
+			<button class="button-back clicked-back rotate-strelka"><img class="clicked-back" src="img/arrow.png" width="24" alt="W_Pic"></button>
 			<div class="time-of-day-temperature activity">
 				<div class="day-of-week">Пт, 18 мая</div>
 				<div class="wrapper5">
@@ -68,7 +67,7 @@
 
 
 
-			<div class="time-of-day-temperature block-none">
+			<div class="time-of-day-temperature">
 				<div class="day-of-week">Сб, 19 мая</div>
 				<div class="wrapper5">
 
@@ -96,7 +95,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature block-none">
+			<div class="time-of-day-temperature">
 				<div class="day-of-week">Вс, 20 мая</div>
 				<div class="wrapper5">
 
@@ -124,7 +123,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature block-none">
+			<div class="time-of-day-temperature">
 				<div class="day-of-week">Пн, 21 мая</div>
 				<div class="wrapper5">
 
@@ -152,7 +151,7 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<div class="time-of-day-temperature block-none">
+			<div class="time-of-day-temperature">
 				<div class="day-of-week">Вт, 22 мая</div>
 				<div class="wrapper5">
 
@@ -180,14 +179,14 @@
 					<div class="temperature-evening">+17</div>
 				</div>
 			</div>
-			<button onclick="nextclick();" class="button-next"><img src="img/arrow.png" width="24" alt="W_Pic"></button>
+			<button class="button-next clicked-next"><img class="clicked-next" src="img/arrow.png" width="24" alt="W_Pic"></button>
 		</div>
 		<div class="trigger">
-			<button onclick="trigger__button1();" class="trigger-button number1">пт</button>
-			<button onclick="trigger__button2();" class="trigger-button number2">сб</button>
-			<button onclick="trigger__button3();" class="trigger-button number3">вс</button>
-			<button onclick="trigger__button4();" class="trigger-button number4">пн</button>
-			<button onclick="trigger__button5();" class="trigger-button number5">вт</button>
+			<button class="trigger-button activus" data-btnIndex="0">пт</button>
+			<button class="trigger-button" data-btnIndex="1">сб</button>
+			<button class="trigger-button" data-btnIndex="2">вс</button>
+			<button class="trigger-button" data-btnIndex="3">пн</button>
+			<button class="trigger-button" data-btnIndex="4">вт</button>
 		</div>
 		</div>
 
@@ -357,5 +356,6 @@
 <footer class="main-footer">
 	<p>2018 &#169; Copyright</p>
 </footer>
+	<script src="js/script.js"></script>
 </body>
 </html>

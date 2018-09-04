@@ -7,7 +7,7 @@
 	<title>Прогноз погоды</title>
 	<link href="styles/normalize.css" rel="stylesheet">
 	<link href="styles/main.css" rel="stylesheet">
-	<script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -39,14 +39,14 @@
 			</section>
 			<section class="block-2">
 				<p class="media-text">Вероятность осадков: 20%</br>Влажность: 45%</br>Ветер: 11 км/ч</p>
-        <div class="main-buttons">
-          <button onclick="diagrammy__1()" class="buttonss button-temperature active2">Температура</button>
-          <button onclick="diagrammy__2()" class="buttonss button-rainfall shadow">Вероятность </br>осадков</button>
-          <button onclick="diagrammy__3()" class="buttonss button-wind shadow"> Ветер</button>
+        <div class="main-buttons" id="main-buttons">
+          <button class="buttonss button-temperature active2" data-btnIndex="0">Температура</button>
+          <button class="buttonss button-rainfall shadow" data-btnIndex="1">Вероятность </br>осадков</button>
+          <button class="buttonss button-wind shadow" data-btnIndex="2"> Ветер</button>
         </div>
 			</section>
 		</div>
-		<section class="diagram">
+		<section class="diagram active1">
 			<div class="diagram-block">
 				<div class="diagram-temperature">
 
@@ -112,7 +112,7 @@
 			</div>
 		</section>
 
-		<section class="diagram diagram-none">
+		<section class="diagram">
 			<div class="diagram-block">
 				<div class="diagram-rainfall">
 					<div class="rainfall-level">
@@ -218,7 +218,7 @@
 			</div>
 		</section>
 
-		<section class="diagram diagram-none">
+		<section class="diagram">
 				<div class="diagram-block">
 						<div class="diagram-wind">
 
@@ -335,5 +335,6 @@
 		<p>2018 &#169; Copyright</p>
 	</footer>
 	</div>
+		<script src="js/index.js"></script>
 </body>
 </html>
