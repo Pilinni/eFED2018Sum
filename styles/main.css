@@ -36,7 +36,7 @@ body{
 .active{
   background-color: #FFFF00;
 }
-.active2{
+.activeButtonDiagram{
   background-color: #86FF73;
 }
 .button-pages{
@@ -127,7 +127,7 @@ section{
 .diagram{
   display: none;
 }
-.active1{
+.activeBlockDiagram{
   display: flex;
   align-items: center;
 
@@ -685,7 +685,7 @@ flex-wrap: wrap;
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .active1{
+  .activeBlockDiagram{
     justify-content: space-between;
     flex-flow: column;
 
@@ -807,7 +807,7 @@ flex-wrap: wrap;
   .time-of-day-temperature{
     display:none;
   }
-  .activity{
+  .activeDay{
     display:block;
   }
 
@@ -823,7 +823,7 @@ flex-wrap: wrap;
     padding: 5px;
     background-color: white;
   }
-  .activus{
+  .activeButtons{
     background-color: #86FF73;
 
   }

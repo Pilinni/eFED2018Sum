@@ -18,15 +18,16 @@ wetherbetter.addEventListener('click', function(event){
 
 function showNext(){
 for (var i = 0; i < elements.length; i++) {
-      if (elements[i].classList.contains('activity')) {
-        elements[i].classList.remove('activity');
-        triggerity[i].classList.remove('activus');
+      if (elements[i].classList.contains('activeDay')) {
+        elements[i].classList.remove('activeDay');
+        triggerity[i].classList.remove('activeButtons');
         if(i === elements.length-1) {
-          elements[0].classList.add('activity');
-          triggerity[0].classList.add('activus');
+          elements[0].classList.add('activeDay');
+          triggerity[0].classList.add('activeButtons');
+          break;
       }
-        elements[i].nextElementSibling.classList.add('activity');
-        triggerity[i].nextElementSibling.classList.add('activus');
+        elements[i].nextElementSibling.classList.add('activeDay');
+        triggerity[i].nextElementSibling.classList.add('activeButtons');
         break;
       }
     }
@@ -34,15 +35,16 @@ for (var i = 0; i < elements.length; i++) {
 
 function showPrev(){
   for (var i = 0; i < elements.length; i++) {
-          if (elements[i].classList.contains('activity')){
-            elements[i].classList.remove('activity');
-            triggerity[i].classList.remove('activus');
+          if (elements[i].classList.contains('activeDay')){
+            elements[i].classList.remove('activeDay');
+            triggerity[i].classList.remove('activeButtons');
             if(i === 0) {
-              elements[elements.length-1].classList.add('activity');
-              triggerity[elements.length-1].classList.add('activus');
+              elements[elements.length-1].classList.add('activeDay');
+              triggerity[elements.length-1].classList.add('activeButtons');
+              break;
           }
-            elements[i].previousElementSibling.classList.add('activity');
-            triggerity[i].previousElementSibling.classList.add('activus');
+            elements[i].previousElementSibling.classList.add('activeDay');
+            triggerity[i].previousElementSibling.classList.add('activeButtons');
             break;
           }
         }
@@ -50,29 +52,11 @@ function showPrev(){
 
 function showSpecialDay(){
   for (var i = 0; i < elements.length; i++) {
-    elements[i].classList.remove('activity');
+    elements[i].classList.remove('activeDay');
   }
   for (var i = 0; i < triggerity.length; i++) {
-    triggerity[i].classList.remove('activus');
+    triggerity[i].classList.remove('activeButtons');
   }
-  if(index == 0 ){
-    triggerity[0].classList.add('activus');
-    elements[0].classList.add('activity');
-  }
-  else if(index == 1){
-    triggerity[1].classList.add('activus');
-    elements[1].classList.add('activity');
-  }
-  else if(index == 2){
-    triggerity[2].classList.add('activus');
-    elements[2].classList.add('activity');
-  }
-  else if(index == 3){
-    triggerity[3].classList.add('activus');
-    elements[3].classList.add('activity');
-  }
-  else if(index == 4){
-    triggerity[4].classList.add('activus');
-    elements[4].classList.add('activity');
-  }
-  }
+  triggerity[index].classList.add('activeButtons');
+  elements[index].classList.add('activeDay');
+}

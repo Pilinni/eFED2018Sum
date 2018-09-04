@@ -12,21 +12,11 @@ mainInfoTable.addEventListener('click', function(event){
 
 function showMainInfo() {
   for (var i = 0; i < diagram_array.length; i++) {
-    diagram_array[i].classList.remove('active1');
+    diagram_array[i].classList.remove('activeBlockDiagram');
   }
   for (var i = 0; i < buttonss_array.length; i++) {
-    buttonss_array[i].classList.remove('active2');
+    buttonss_array[i].classList.remove('activeButtonDiagram');
   }
-  if(index == 0){
-    diagram_array[0].classList.add('active1');
-    buttonss_array[0].classList.add('active2');
-  }
-  else if(index == 1){
-    diagram_array[1].classList.add('active1');
-    buttonss_array[1].classList.add('active2');
-  }
-  else if(index == 2){
-    diagram_array[2].classList.add('active1');
-    buttonss_array[2].classList.add('active2');
-  }
+  diagram_array[index].classList.add('activeBlockDiagram');
+  buttonss_array[index].classList.add('activeButtonDiagram');
 }
