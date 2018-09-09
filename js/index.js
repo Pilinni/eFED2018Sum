@@ -1,22 +1,39 @@
-//Дополнительное задание
-var diagram_array = document.getElementsByClassName('diagram');
-var buttonss_array = document.getElementsByClassName('buttonss');
-var mainInfoTable = document.getElementById('main-buttons');
+var BtnTemperatureProbabilityWind = document.getElementById('button-temperature-probability-wind');
+var elementButtonrow = document.querySelectorAll('.buttonrow-button-noactive');
 
-mainInfoTable.addEventListener('click', function(event){
-    if(event.target.classList.contains('buttonss')){
-      index = parseInt(event.target.dataset.btnindex);
-      showMainInfo(index);
+BtnTemperatureProbabilityWind.addEventListener("click", switchButtonStatistic)
+
+function switchButtonStatistic() {
+
+  if (event.target.className === 'buttonrow-button-noactive') {
+    showButton()
+  }
+}
+
+function showButton() {
+  for (var i = 0; i < elementButtonrow.length; i++) {
+    if (elementButtonrow[i].classList.contains('buttonrow-button-active')) {
+      elementButtonrow[i].classList.remove('buttonrow-button-active');
+
     }
-})
+    event.target.classList.add('buttonrow-button-active');
+  }
+  for (var i = 0; i < elementButtonrow.length; i++) {
+    if (elementButtonrow[i].classList.contains('buttonrow-button-active')) {
+      var indexDiv = i;
+    }
+  }
+  showSection(indexDiv)
+}
 
-function showMainInfo() {
-  for (var i = 0; i < diagram_array.length; i++) {
-    diagram_array[i].classList.remove('activeBlockDiagram');
+var Section = document.querySelectorAll('.probability-of-precipitation');
+
+function showSection(indexDiv) {
+  for (var i = 0; i < Section.length; i++) {
+    if (Section[i].classList.contains('activeSection')) {
+      Section[i].classList.remove('activeSection')
+      Section[indexDiv].classList.add('activeSection')
+      break
+    }
   }
-  for (var i = 0; i < buttonss_array.length; i++) {
-    buttonss_array[i].classList.remove('activeButtonDiagram');
-  }
-  diagram_array[index].classList.add('activeBlockDiagram');
-  buttonss_array[index].classList.add('activeButtonDiagram');
 }
