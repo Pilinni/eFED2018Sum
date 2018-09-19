@@ -1,41 +1,36 @@
 ///////////////////////////////////////////////////////////////БЛОК ЗАПРОСА ПОГОДЫ НА 1 ДЕНЬ////////////////////////////////////////////////////////////
-var CityName = 'Izhevsk';
-
 //Запрос погоды на 1 день
-function loadArray(callback, CityName){
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function() {callback(xhr.responseText)}
-  console.log (CityName); // Сюда не приходит(не записывается почему???)
-  var ajaxURL = `http://api.openweathermap.org/data/2.5/weather?q=${CityName},RU&units=metric&APPID=256e77682b936e47aa0d7638b75fc891`;
-  xhr.open("GET", ajaxURL, true);
-  xhr.send();
+
+function loadArray(callback, ajaxURLcity){
+  fetch(ajaxURLcity)
+     .then(function (response) {
+       return Promise.all([response.status, response.json()])
+     })
+     .then(function (result) {
+       if (result[0] != 200) {
+         console.log('Ошибка');
+       } else {
+         callback(result[1]);
+       }
+     }
+   ) .catch (function (error){alert('Ошибка') })
 }
-//Препобразование данных погоды на 1 день
+//Преобразование данных погоды на 1 день
 function transform(str) {
-    var bigArray = JSON.parse(str);
-    console.log (bigArray);
     var renderData = {
-      weatherstatus:bigArray.weather[0].main,
-      temp : bigArray.main.temp,
-      humidity: bigArray.main.humidity,
-      wind: bigArray.wind.speed,
-      rainfall: bigArray.clouds.all
+      weatherstatus: str.weather[0].main,
+      temp : str.main.temp,
+      humidity: str.main.humidity,
+      wind: str.wind.speed,
+      rainfall: str.clouds.all
     };
-    if(renderData.weatherstatus == "Clouds"){
-       renderData.weatherstatus = 'облачно';
-    }
-    if(renderData.weatherstatus == "Rain"){
-       renderData.weatherstatus = 'дождливо';
-    }
-    if(renderData.weatherstatus == "Sun"){
-       renderData.weatherstatus = 'солнечно';
-    }
-    if(renderData.weatherstatus == "Clear"){
-       renderData.weatherstatus = 'ясно';
-    }
-    if(renderData.weatherstatus == "Fog"){
-       renderData.weatherstatus = 'туман';
-    }
+    if(renderData.weatherstatus == "Clouds"){renderData.weatherstatus = 'облачно';}
+    if(renderData.weatherstatus == "Rain"){renderData.weatherstatus = 'дождливо';}
+    if(renderData.weatherstatus == "Sun"){renderData.weatherstatus = 'солнечно';}
+    if(renderData.weatherstatus == "Clear"){renderData.weatherstatus = 'ясно';}
+    if(renderData.weatherstatus == "Fog"){renderData.weatherstatus = 'густой туман';}
+    if(renderData.weatherstatus == "Mist"){renderData.weatherstatus = 'пелена';}
+
   render (renderData);
 }
 // Работа с DOM
@@ -49,18 +44,24 @@ function render(renderData) {
 ///////////////////////////////////////////////////////////////БЛОК ЗАПРОСА И ОБРАБОТКИ ДАННЫХ ЗАГРЯЗНЕНИЯ ВОЗДУХА////////////////////////////////////////////////////////////
 
 //Запрос загрязнения воздуха
-function loadArray2(callback){
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function() {callback(xhr.responseText)}
-  xhr.open("GET", "http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=256e77682b936e47aa0d7638b75fc891", true);
-  xhr.send();
+function loadArray2(callback, ajaxURLCO2){
+  fetch(ajaxURLCO2)
+     .then(function (response) {
+       return Promise.all([response.status, response.json()])
+     })
+     .then(function (result) {
+       if (result[0] != 200) {
+         console.log('Ошибка');
+       } else {
+         callback(result[1]);
+       }
+     }
+   ) .catch (function (error){alert('Ошибка') })
 }
 //Преобразование данных загрязнения воздуха
 function transform2(str) {
-    var bigPollution = JSON.parse(str);
-    console.log (bigPollution);
-    var renderData2 = {
-      indexC: bigPollution.data[0].value
+      var renderData2 = {
+      indexC: str.data[0].value
     };
   render2 (renderData2);
 }
@@ -76,9 +77,13 @@ function getDayInTable(){
   document.getElementById('dayofweek').textContent = (days[day]);
 }
 // Запуск ракеты
-loadArray(transform);
-loadArray2(transform2);
+
+var ajaxURLcity = `http://api.openweathermap.org/data/2.5/weather?q=Izhevsk,RU&units=metric&APPID=256e77682b936e47aa0d7638b75fc891`;
+loadArray(transform, ajaxURLcity);
+var ajaxURLCO2 = `http://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=256e77682b936e47aa0d7638b75fc891`;
+loadArray2(transform2, ajaxURLCO2);
 getDayInTable();
+
 
 
 //Забирает введённый город в поиск, и записывает его в переменную CityName
