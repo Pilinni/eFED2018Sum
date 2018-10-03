@@ -1,4 +1,3 @@
-
 <html lang="ru">
 
 <head>
@@ -33,21 +32,21 @@
 	<main class="main-container">
 		<div class="index-columns">
 			<section class="block-1">
-				<p class="media-text">
-					<div id="city-country">Ижевск, Россия</div>
-					<div id="dayofweek">load...</div>
-					<div id="weatherstatus">load...</div>
+				<p class="media-text basic-weather">
+					<div class="city-country" id="city-country">load...</div>
+					<div class="dayofweek" id="dayofweek">load...</div>
+					<div class="weatherstatus" id="weatherstatus">load...</div>
 				</p>
 				<div class="weather__monitoring">
-					<img src="img/Sunny Weather.png" alt="Sunny Weather" width="80px">
-					<div id="ra">load...</div>
+					<img class="img-status" src="img/Sunny Weather.png" alt="Sunny Weather" >
+					<div class="ra" id="ra">load...</div>
 				</div>
 			</section>
 			<section class="block-2">
-				<p class="media-text">
-					<div id="rainfall">Вероятность осадков: load...</div>
-					<div id="humidity">Влажность: load...</div>
-					<div id="wind">Ветер: load...</div>
+				<p class="media-text basic-weather2">
+					<div class="rainfallity" id="rainfall">Вероятность осадков: load...</div>
+					<div class="humidityty" id="humidity">Влажность: load...</div>
+					<div class="windty" id="wind">Ветер: load...</div>
         <div class="main-buttons" id="main-buttons">
           <button class="buttonss button-temperature activeButtonDiagram" data-btnIndex="0">Температура</button>
           <button class="buttonss button-rainfall shadow" data-btnIndex="1">Вероятность </br>осадков</button>
@@ -59,64 +58,64 @@
 			<div class="diagram-block">
 				<div class="diagram-temperature">
 
-					<div class="temperature">
-						<div class="high-temperature"></div>
-						<div class="media-text2 yellow">14</div>
+					<div class="temperature temperature-level">
+						<div class="column high-temperature"></div>
+						<div class="column__label media-text2 yellow">14</div>
 					</div>
 
 
-					<div class="temperature">
-						<div class="high-temperature"></div>
-						<div class="media-text2 yellow">14</div>
+					<div class="temperature temperature-level">
+						<div class="column high-temperature"></div>
+						<div class="column__label media-text2 yellow">14</div>
 					</div>
 
-					<div class="temperature">
-						<div class="high-temperature"></div>
-						<div class="media-text2 yellow">14</div>
+					<div class="temperature temperature-level">
+						<div class="column high-temperature"></div>
+						<div class="column__label media-text2 yellow">14</div>
 					</div>
 
-					<div class="temperature">
-						<div class="low-temperature"></div>
-						<div class="media-text2 yellow">12</div>
+					<div class="temperature temperature-level">
+						<div class="column low-temperature"></div>
+						<div class="column__label media-text2 yellow">12</div>
 					</div>
 
 				</div>
 				<div class="time">
-					<div class="media-text2">17:00</div>
-					<div class="media-text2">20:00</div>
-					<div class="media-text2">23:00</div>
-					<div class="media-text2">02:00</div>
+					<div class="media-text2 graphics-temparature__time">17:00</div>
+					<div class="media-text2 graphics-temparature__time">20:00</div>
+					<div class="media-text2 graphics-temparature__time">23:00</div>
+					<div class="media-text2 graphics-temparature__time">02:00</div>
 				</div>
 			</div>
 			<div class="diagram-block">
 				<div class="diagram-temperature">
 
-					<div class="temperature">
-						<div class="low-temperature"></div>
-						<div class="media-text2 yellow">11</div>
+					<div class="temperature temperature-level">
+						<div class="column low-temperature"></div>
+						<div class="column__label media-text2 yellow">11</div>
 					</div>
 
-					<div class="temperature">
-						<div class="low-temperature"></div>
-						<div class="media-text2 yellow">13</div>
+					<div class="temperature temperature-level">
+						<div class="column low-temperature"></div>
+						<div class="column__label media-text2 yellow">13</div>
 					</div>
 
-					<div class="temperature">
-						<div class="high-temperature"></div>
-						<div class="media-text2 yellow">14</div>
+					<div class="temperature temperature-level">
+						<div class="column high-temperature"></div>
+						<div class="column__label media-text2 yellow">14</div>
 					</div>
 
-					<div class="temperature">
-						<div class="high-temperature"></div>
-						<div class="media-text2 yellow">14</div>
+					<div class="temperature temperature-level">
+						<div class="column high-temperature"></div>
+						<div class="column__label media-text2 yellow">14</div>
 					</div>
 
 				</div>
 				<div class="time">
-					<div class="media-text2">05:00</div>
-					<div class="media-text2">08:00</div>
-					<div class="media-text2">11:00</div>
-					<div class="media-text2">14:00</div>
+					<div class="media-text2 graphics-temparature__time">05:00</div>
+					<div class="media-text2 graphics-temparature__time">08:00</div>
+					<div class="media-text2 graphics-temparature__time">11:00</div>
+					<div class="media-text2 graphics-temparature__time">14:00</div>
 				</div>
 			</div>
 		</section>
@@ -125,104 +124,104 @@
 			<div class="diagram-block">
 				<div class="diagram-rainfall">
 					<div class="rainfall-level">
-						<div class="wow-rainfall"></div>
+						<div class="column wow-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
-						<div class="media-text2 blue">24%</div>
+						<div class="column high-rainfall"></div>
+						<div class="column__label media-text2 blue">24%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
+						<div class="column low-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
+						<div class="column high-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
-						<div class="media-text2 blue">30%</div>
+						<div class="column high-rainfall"></div>
+						<div class="column__label media-text2 blue">30%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="wow-rainfall"></div>
+						<div class="column wow-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="wow-rainfall"></div>
+						<div class="column wow-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
-						<div class="media-text2 blue">24%</div>
+						<div class="column high-rainfall"></div>
+						<div class="column__label media-text2 blue">24%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
+						<div class="column low-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall">
+						<div class="column high-rainfall">
 						</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
-						<div class="media-text2 blue">8%</div>
+						<div class="column low-rainfall"></div>
+						<div class="column__label media-text2 blue">8%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
+						<div class="column high-rainfall"></div>
 					</div>
 				</div>
 				<div class="time">
-					<div class="media-text2">17:00</div>
-					<div class="media-text2">20:00</div>
-					<div class="media-text2">23:00</div>
-					<div class="media-text2">02:00</div>
+					<div class="media-text2 graphics-rainfall__time">17:00</div>
+					<div class="media-text2 graphics-rainfall__time">20:00</div>
+					<div class="media-text2 graphics-rainfall__time">23:00</div>
+					<div class="media-text2 graphics-rainfall__time">02:00</div>
 				</div>
 			</div>
 			<div class="diagram-block">
 				<div class="diagram-rainfall">
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
+						<div class="column low-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
-						<div class="media-text2 blue">4%</div>
+						<div class="column high-rainfall"></div>
+						<div class="column__label media-text2 blue">4%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
+						<div class="column low-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall">
+						<div class="column high-rainfall">
 						</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
-						<div class="media-text2 blue">6%</div>
+						<div class="column low-rainfall"></div>
+						<div class="column__label media-text2 blue">6%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
+						<div class="column high-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
+						<div class="column low-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="null-rainfall"></div>
-						<div class="media-text2 blue">0%</div>
+						<div class="column null-rainfall"></div>
+						<div class="column__label media-text2 blue">0%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="null-rainfall"></div>
+						<div class="column null-rainfall"></div>
 					</div>
 					<div class="rainfall-level">
-						<div class="null-rainfall">
+						<div class="column null-rainfall">
 						</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="low-rainfall"></div>
-						<div class="media-text2 blue">1%</div>
+						<div class="column low-rainfall"></div>
+						<div class="column__label media-text2 blue">1%</div>
 					</div>
 					<div class="rainfall-level">
-						<div class="high-rainfall"></div>
+						<div class="column high-rainfall"></div>
 					</div>
 				</div>
 				<div class="time">
-					<div class="media-text2">05:00</div>
-					<div class="media-text2">08:00</div>
-					<div class="media-text2">11:00</div>
-					<div class="media-text2">14:00</div>
+					<div class="media-text2 graphics-rainfall__time">05:00</div>
+					<div class="media-text2 graphics-rainfall__time">08:00</div>
+					<div class="media-text2 graphics-rainfall__time">11:00</div>
+					<div class="media-text2 graphics-rainfall__time">14:00</div>
 				</div>
 			</div>
 		</section>
@@ -231,74 +230,74 @@
 				<div class="diagram-block">
 						<div class="diagram-wind">
 
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-310">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">7</div>
+										<div class="media-text2 wind-info__value">7</div>
 								</div>
 
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-310">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">5</div>
+										<div class="media-text2 wind-info__value">5</div>
 								</div>
 
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-350">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">5</div>
+										<div class="media-text2 wind-info__value">5</div>
 								</div>
 
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-10">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">5</div>
+										<div class="media-text2 wind-info__value">5</div>
 								</div>
 
 						</div>
 						<div class="time">
-								<div class="media-text2">17:00</div>
-								<div class="media-text2">20:00</div>
-								<div class="media-text2">23:00</div>
-								<div class="media-text2">02:00</div>
+								<div class="media-text2 graphics-wind__time">17:00</div>
+								<div class="media-text2 graphics-wind__time">20:00</div>
+								<div class="media-text2 graphics-wind__time">23:00</div>
+								<div class="media-text2 graphics-wind__time">02:00</div>
 						</div>
 				</div>
 				<div class="diagram-block">
 						<div class="diagram-wind">
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-10">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">6</div>
+										<div class="media-text2 wind-info__value">6</div>
 								</div>
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-10">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div>6</div>
+										<div class="media-text2 wind-info__value">6</div>
 								</div>
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-10">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">6</div>
+										<div class="media-text2 wind-info__value">6</div>
 								</div>
-								<div class="wind">
+								<div class="wind wind-level">
 										<div class="wind-10">
-												<img src="img/wind.svg" alt="wind picture">
+												<img class="wind-info__arrow" src="img/wind.svg" alt="wind picture">
 										</div>
-										<div class="media-text2">6</div>
+										<div class="media-text2 wind-info__value">6</div>
 								</div>
 						</div>
 						<div class="time">
-								<div class="media-text2">05:00</div>
-								<div class="media-text2">08:00</div>
-								<div class="media-text2">11:00</div>
-								<div class="media-text2">14:00</div>
+								<div class="media-text2 graphics-wind__time">05:00</div>
+								<div class="media-text2 graphics-wind__time">08:00</div>
+								<div class="media-text2 graphics-wind__time">11:00</div>
+								<div class="media-text2 graphics-wind__time">14:00</div>
 						</div>
 				</div>
 		</section>
@@ -307,37 +306,26 @@
 
 		<section class="weather">
 			<div class="weather-item weather-active">
-				<p>ср</p><img src="img/cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">22&deg;</span> 13&deg;</p>
+				<p class="weather-item__day-name">ср</p><img class="weather-item__weather-img" src="img/cloudy.png" alt="icon-weather" width="48px" height="48px">
+				<p class="weather-item__temperature"><span class="green">22&deg;</span> 13&deg;</p>
 			</div>
 			<div class="weather-item">
-				<p>чт</p><img src="img/rain_light.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">21&deg;</span> 11&deg;</p>
+				<p class="weather-item__day-name">чт</p><img class="weather-item__weather-img" src="img/rain_light.png" alt="icon-weather" width="48px" height="48px">
+				<p class="weather-item__temperature"><span class="green">21&deg;</span> 11&deg;</p>
 			</div>
 			<div class="weather-item">
-				<p>пт</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">24&deg;</span> 12&deg;</p>
+				<p class="weather-item__day-name">пт</p><img class="weather-item__weather-img" src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
+				<p class="weather-item__temperature"><span class="green">24&deg;</span> 12&deg;</p>
 			</div>
 			<div class="weather-item">
-				<p>сб</p><img src="img/rain_s_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">26&deg;</span> 13&deg;</p>
+				<p class="weather-item__day-name">сб</p><img class="weather-item__weather-img" src="img/rain_s_cloudy.png" alt="icon-weather" width="48px" height="48px">
+				<p class="weather-item__temperature"><span class="green">26&deg;</span> 13&deg;</p>
 			</div>
 			<div class="weather-item">
-				<p>вс</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">27&deg;</span> 14&deg;</p>
+				<p class="weather-item__day-name">вс</p><img class="weather-item__weather-img" src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
+				<p class="weather-item__temperature"><span class="green">27&deg;</span> 14&deg;</p>
 			</div>
-			<div class="weather-item">
-				<p>пн</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">28&deg;</span> 14&deg;</p>
-			</div>
-			<div class="weather-item">
-				<p>вт</p><img src="img/rain_s_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">28&deg;</span> 14&deg;</p>
-			</div>
-			<div class="weather-item">
-				<p>ср</p><img src="img/partly_cloudy.png" alt="icon-weather" width="48px" height="48px">
-				<p><span class="green">28&deg;</span> 14&deg;</p>
-			</div>
+
 		</section>
 	</main>
 	<footer class="main-footer">

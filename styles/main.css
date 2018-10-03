@@ -91,7 +91,7 @@ section{
 .block-1, .block-2{
   display:block;
   vertical-align:top;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 .block-1{
   width: 45%;
@@ -195,8 +195,12 @@ section{
   justify-content: center;
 
 }
+.main-buttons{
+  margin-top: 30px;
+}
 .weather{
   display: flex;
+  justify-content: space-around;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom:25px;
@@ -641,17 +645,7 @@ flex-wrap: wrap;
 
 @media (max-width: 768px)
 {
-  .weather{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-  .weather-item{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    width: 100%;
-  }
+
 
   .diagram-block{
     width: 100%;
@@ -662,12 +656,31 @@ flex-wrap: wrap;
   .search{
     width: 170px;
 }
-  .main-buttons{
-    margin-top: 30px;
+  #rainfall{
+  font-size: 20px;
+}
+  #humidity{
+  font-size: 20px;
+}
+  #wind{
+  font-size: 20px;
+}
+  #city-country {
+    font-size: 20px;
+}
+  #dayofweek {
+    font-size: 20px;
+}
+  #weatherstatus {
+    font-size: 20px;
 }
   #ra {
     font-size: 30px;
 }
+#indexC {
+  font-size: 12px;
+}
+
   .block-2 > p {
     margin-bottom:0px;
   }
@@ -696,9 +709,11 @@ flex-wrap: wrap;
   }
 }
 @media  (max-width: 740px){
+
   .main-buttons{
     flex-direction: column;
     font-size: 12px;
+    margin-top: 5px;
   }
   .button-temperature,
   .button-rainfall,
@@ -715,6 +730,7 @@ flex-wrap: wrap;
   }
 }
 @media (max-width: 700px){
+
   .header-search{
     width: 180px;
   }
@@ -728,10 +744,31 @@ flex-wrap: wrap;
   }
 }
 @media (max-width: 664px){
+  #rainfall{
+  font-size: 18px;
+}
+  #humidity{
+  font-size: 18px;
+}
+  #wind{
+  font-size: 18px;
+}
+  #city-country {
+    font-size: 18px;
+}
+  #dayofweek {
+    font-size: 18px;
+}
+  #weatherstatus {
+    font-size: 18px;
+}
+#ra {
+  font-size: 20px;
+}
   .zagr{
     padding:0px;
     margin-top: 0px;
-    padding-top: 16px;
+    padding-top: 12px;
     text-align: center;
     width: 60%;
   }
@@ -757,6 +794,39 @@ flex-wrap: wrap;
   }
 }
 @media (max-width: 500px){
+
+  #rainfall{
+  font-size: 14px;
+}
+  #humidity{
+  font-size: 14px;
+}
+  #wind{
+  font-size: 14px;
+}
+  #city-country {
+    font-size: 14px;
+}
+  #dayofweek {
+    font-size: 14px;
+}
+  #weatherstatus {
+    font-size: 14px;
+}
+#ra {
+  font-size: 20px;
+}
+  .weather{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .weather-item{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 100%;
+  }
   .site-navigation-button{
     margin-left: auto;
     margin-right: auto;
@@ -773,7 +843,7 @@ flex-wrap: wrap;
     text-align: center;
     padding-left: 0px;
     margin-top: 0px;
-    padding-top:5px;
+    padding-top:8px;
     width: 100%;
     padding-bottom: 5px;
   }
@@ -836,6 +906,24 @@ flex-wrap: wrap;
 
 
 @media (max-width: 360px){
+  #rainfall{
+  font-size: 12px;
+}
+  #humidity{
+  font-size: 12px;
+}
+  #wind{
+  font-size: 12px;
+}
+  #city-country {
+    font-size: 12px;
+}
+  #dayofweek {
+    font-size: 12px;
+}
+  #weatherstatus {
+    font-size: 12px;
+}
   .site-navigation-button{
     margin-left: auto;
     margin-right: auto;
@@ -847,7 +935,7 @@ flex-wrap: wrap;
     padding-right: 0px;
   }
   #ra{
-    font-size: 25px;
+    font-size: 16px;
   }
   .media-text{
     font-size: 14px;
@@ -876,7 +964,7 @@ flex-wrap: wrap;
 }
 @media (max-width: 315px){
   #ra{
-    font-size: 30px;
+    font-size: 16px;
     text-align: center;
     display: block;
     margin-left: auto;
